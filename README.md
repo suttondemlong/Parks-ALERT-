@@ -1,4 +1,4 @@
-# Whatever-it-gonna-BE
+# Whatever-it
 This is the first project for GA but don't say that in the final iteration.
 # Project Overview
 
