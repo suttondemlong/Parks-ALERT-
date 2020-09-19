@@ -1,18 +1,22 @@
-# Whatever-it
-This is the first project for GA but don't say that in the final iteration.
+# Parks ALERT!
+
 # Project Overview
+
+Parks ALERT! Is a direct resource for checking the status of your local National Park when you are planning a trip. The purpose is to allow users to bypass the National Parks Services website to access their "Alert" information directly. Intended to be used as a quick reference tool on a short-term timeframe.
 
 ## Project Name
 
-The name of your project.
+Parks ALERT!
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+Parks ALERT! will be a simple interface with 3 search options. Visitors to the site will be given two drop down menus: "State" and "Park Name". There will also be a key word search if the user knows exactly what they are looking for. The search bar should function in conjunction with or independent of the drop down menus. However the "Park Name" will only work if a "State" is chosen. The search will return a list of articles from the NPS database on all of their alerts for the given area or park. If the "Park Name" value is not chosen, the results will reflect the entire state. 
+
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
+I have chosen the NPS API database for their Alert system.
+
 
 ## Wireframes
 
