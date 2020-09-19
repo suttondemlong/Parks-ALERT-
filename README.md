@@ -15,7 +15,7 @@ Parks ALERT! will be a simple interface with 3 search options. Visitors to the s
 
 ## API and Data Sample
 
-I have chosen the NPS API database for their Alert system. [I'm an inline-style link](https://www.google.com)
+I have chosen the [NPS API](https://developer.nps.gov/api/v1/alerts?api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG) database for their Alert system.
 
 
 ## Wireframes
