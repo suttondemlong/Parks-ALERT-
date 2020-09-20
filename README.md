@@ -15,29 +15,65 @@ Parks ALERT! will be a simple interface with 3 search options. Visitors to the s
 
 ## API and Data Sample
 
-I have chosen the [NPS API](https://developer.nps.gov/api/v1/alerts?api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG) database for their Alert system.
+I have chosen the [NPS API](https://developer.nps.gov/api/v1/alerts?stateCode=&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG) database for their Alert system.
 
+{
+    "total": "980",
+    "limit": "50",
+    "start": "0",
+    "data": [
+        {
+            "url": "",
+            "title": "Limited Museum Exhibits",
+            "id": "AA07AB45-1FEF-4A44-BA2E-2A22FC4CBC08",
+            "parkCode": "nepe",
+            "description": "Currently the park is conducting evaluation and conservation work on the artifacts that were in the visitor center museum. The exhibits will be installed over the next few weeks with an anticipated completion date of October 2, 2020.",
+            "category": "Information"
+        },
+        {
+            "url": "https://www.nps.gov/sapu/planyourvisit/conditions.htm",
+            "title": "Phased reopening--some locations closed due to COVID-19",
+            "id": "33889368-C680-4850-8817-38B4544889FD",
+            "parkCode": "sapu",
+            "description": "The trails at Abó, Gran Quivira and Quarai are open from 9 am- 5 pm. The Main Visitor Center in Mountainair and the Abó Visitor Center are open daily. The Visitor Centers at Gran Quivira and Quarai are open as staffing allows.",
+            "category": "Park Closure"
+        },
+        {
+            "url": "",
+            "title": "Partially Restored Visitor Center Access",
+            "id": "CC285DB9-3B85-4F6C-99D6-8DA445BABC25",
+            "parkCode": "stri",
+            "description": "Visitor Center is open to the public with a capacity of 25 people from 10 AM to 4 PM Friday through Monday. Restrooms are open daily from 9 AM to 5 PM. Interpretive publications available in the restroom lobby daily.",
+            "category": "Information"
+        },
+}
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+The app will have essentially two screens: a landing page with just the search options and a secondary page displaying the search options with a search bar at the top. The wireframes show layouts for a desktop version and a mobile device version, but the desktop version will be my main goal (mobile formatting will be a part of my post MVP).
+
+https://www.figma.com/proto/weaT75hWk1jnmi4C1dsdIt/Parks-ALERT?node-id=1%3A3&scaling=scale-down
+https://www.figma.com/file/weaT75hWk1jnmi4C1dsdIt/Parks-ALERT?node-id=0%3A1
 
 ### MVP/PostMVP
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Access and implement data from the NPS Alert System API 
+- Create a search bar that has drop down menus with options referencing the information from the NPS API
+- Create a search bar that implements a keyword search referencing the data in NPS API
+- Return results from NPS API, with links to the actual articles written by NPS
+- Design functionality that will allow for new searches to replace old searches 
+- Write CSS that is functional and legible using flex and dynamic response tools
 
 #### PostMVP  
 *These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
+- Find and link a data set that connects the park abreviations with their actual names, reducing friction for user experience.
+- Use styling to create a visually pleasing product
+- Create dynamic styling that will accomodate mobile devices seamlessly
 
 ## Project Schedule
 
@@ -47,7 +83,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Sept 18-21| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|Sept 18-21| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Sept 21| Project Approval | Incomplete
 |Sept 22| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Sept 23| MVP | Incomplete
