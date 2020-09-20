@@ -102,21 +102,30 @@ Tell us how long you anticipate spending on each area of development. Be sure to
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
+MVP:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Access and implement data from the NPS Alert System API | H | 1.5hrs|  |  |
+| Create Search bar (drop downs and keyword) | H | 3.5hrs|  |  |
+| Connect drop downs and keyword to API | H | 5hrs|  |  |
+| Connect article titles to the NPS full article | H | 2hrs|  |  |
+| Write function for returning results and clearing results | H | 3hrs|  |  |
+| Basic styling for MVP | H | 3hrs|  |  |
+| Total | H | 18hrs|  |  |
+
+PostMVP:
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Sync state park abbreviations with actual names | M | 5hrs|  |  |
+| Style for readability and ease of use | M | 5hrs|  |  |
+| Create dynamic styling for mobile devices | M | 3hrs|  |  |
+| Total | M | 13hrs|  |  |
+
+| Total/Total | H | 31hrs|  |  |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+
