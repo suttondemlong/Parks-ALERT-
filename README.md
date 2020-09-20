@@ -10,7 +10,7 @@ Parks ALERT!
 
 ## Project Description
 
-Parks ALERT! will be a simple interface with 3 search options. Visitors to the site will be given two drop down menus: "State" and "Park Name". There will also be a key word search if the user knows exactly what they are looking for. The search bar should function in conjunction with or independent of the drop down menus. However the "Park Name" will only work if a "State" is chosen. The search will return a list of articles from the NPS database on all of their alerts for the given area or park. If the "Park Name" value is not chosen, the results will reflect the entire state. 
+Parks ALERT! will be a simple interface with 3 search options. Visitors to the site will be given two drop down menus: "State" and "Park Name". There will also be a key word search if the user knows what they are looking for. The search bar should function in conjunction with or independent of the drop down menus. However the "Park Name" will only work if a "State" is chosen. The search will return a list of articles from the NPS database on all of their alerts for the given area or park. If the "Park Name" value is not chosen, the results will reflect the entire state. 
 
 
 ## API and Data Sample
@@ -55,7 +55,7 @@ I have chosen the [NPS API](https://developer.nps.gov/api/v1/alerts?stateCode=&a
 The app will have essentially two screens: a landing page with just the search options and a secondary page displaying the search options with a search bar at the top. The wireframes show layouts for a desktop version and a mobile device version, but the desktop version will be my main goal (mobile formatting will be a part of my post MVP).
 
 https://www.figma.com/proto/weaT75hWk1jnmi4C1dsdIt/Parks-ALERT?node-id=1%3A3&scaling=scale-down
-https://www.figma.com/file/weaT75hWk1jnmi4C1dsdIt/Parks-ALERT?node-id=0%3A1
+
 
 ### MVP/PostMVP
 
@@ -105,23 +105,23 @@ Time frames are also key in the development cycle.  You have limited time to cod
 MVP:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Access and implement data from the NPS Alert System API | H | 1.5hrs|  |  |
-| Create Search bar (drop downs and keyword) | H | 3.5hrs|  |  |
+| Access and implement data from the NPS Alert System API | H | 2hrs|  |  |
+| Create Search bar (drop downs and keyword) | H | 4hrs|  |  |
 | Connect drop downs and keyword to API | H | 5hrs|  |  |
 | Connect article titles to the NPS full article | H | 2hrs|  |  |
 | Write function for returning results and clearing results | H | 3hrs|  |  |
 | Basic styling for MVP | H | 3hrs|  |  |
-| Total | H | 18hrs|  |  |
+| Total | H | 19hrs|  |  |
 
 PostMVP:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Sync state park abbreviations with actual names | M | 5hrs|  |  |
-| Style for readability and ease of use | M | 5hrs|  |  |
-| Create dynamic styling for mobile devices | M | 3hrs|  |  |
-| Total | M | 13hrs|  |  |
+| Style for readability and ease of use | M | 6hrs|  |  |
+| Create dynamic styling for mobile devices | M | 4hrs|  |  |
+| Total | M | 15hrs|  |  |
 
-| Total/Total | H | 31hrs|  |  |
+| Total/Total | H | 34hrs|  |  |
 
 ## Code Snippet
 
