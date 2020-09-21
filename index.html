@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script defer src="./app.js"></script>
+  <link rel="stylesheet" href="./main.css">
+  <title>Parks ALERT!</title>
+</head>
+<body>
+  <h1>Parks ALERT!</h1>
+  <h5>Search the NPS database for alerts regarding your favorite national parks.</h5>
+  <!-- <form>
+    <select name="select-park" id="select-park"></select>
+    <button>Search alerts</button>
+  </form> -->
+  <div>
+    <form id="state-form">
+      <input 
+        type="text" 
+        name="state" 
+        placeholder="State abbreviation" 
+        id="state-search" 
+      />
+      <button id="search">Search</button>
+    </form>
+  </div>
+  <div
+    id="state-alerts">
+  </div>
+</body>
+</html>
