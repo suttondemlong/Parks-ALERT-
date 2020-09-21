@@ -11,10 +11,10 @@ async function fetchData(state) {
   try {
     const url = `https://developer.nps.gov/api/v1/alerts?stateCode=${state}&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG`
     const response = await axios.get(url)
-    console.log(response.data.data)
+    console.log(response)
     // const list = Object.keys(response.parkCode)
-    const data = response.data
-    showStateAlerts(data)// function for getting data invokes here
+    // const data = response.data
+    showStateAlerts(response.data.data)  // function for getting data invokes here
   } catch (error) {
     console.log(`Error: ${error}`)
   }
@@ -27,15 +27,30 @@ const form = document.querySelector('#state-form')
 form.addEventListener('submit', (e) => {
   e.preventDefault()
   const inputValue = document.querySelector('#state-form').value
-  // console.log(inputValue)
+  console.log(inputValue)
   document.querySelector('#state-form').value = ''
   fetchData(inputValue)
 })
 
+let alertDiv = document.querySelector('#state-alerts')
+  
+function showStateAlerts(datas) {
+  if (datas.length === 0) {
+    console.log(`No alerts here!`)
+    // const errorResponse = "No alerts!"
+    const errorResponse = document.createElement('h3')
+    errorResponse.innerHTML = "No Alerts!"
+    alertDiv.appendChild(errorResponse)
+  }
+  let searchResult = datas.map(data => {
+    console.log(data.title)
+    const title = document.createElement('h3')
+    title.innerHTML = `${data.title}`
+    alertDiv.appendChild(title)
+  })
+  return searchResult
+}
 
-// function showStateAlerts(data) {
-//   let searchResult = data.map(alert => return `${alert.title}`)
-// }
     
 //   let stateAlert = `
 //   <h4> `
