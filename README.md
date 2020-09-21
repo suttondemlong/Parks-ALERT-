@@ -65,9 +65,9 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 - Access and implement data from the NPS Alert System API 
 - Create a search bar that has drop down menus with options referencing the information from the NPS API
-- Create a search bar that implements a keyword search referencing the data in NPS API
 - Return results from NPS API, with links to the actual articles written by NPS
 - Design functionality that will allow for new searches to replace old searches 
+- Use media query to accomodate mobile devices seamlessly
 - Write CSS that is functional and legible using flex and dynamic response tools
 
 #### PostMVP  
@@ -75,7 +75,8 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 - Find and link a data set that connects the park abreviations with their actual names, reducing friction for user experience.
 - Use styling to create a visually pleasing product
-- Create dynamic styling that will accomodate mobile devices seamlessly
+- Create a search bar that implements a keyword search referencing the data in NPS API
+
 
 ## Project Schedule
 
@@ -106,22 +107,23 @@ MVP:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Access and implement data from the NPS Alert System API | H | 2hrs|  |  |
-| Create Search bar (drop downs and keyword) | H | 4hrs|  |  |
+| Create Search bar (drop downs) | H | 4hrs|  |  |
 | Connect drop downs and keyword to API | H | 5hrs|  |  |
 | Connect article titles to the NPS full article | H | 2hrs|  |  |
 | Write function for returning results and clearing results | H | 3hrs|  |  |
+| Use media query to accomodate mobile devices seamlessly | M | 4hrs|  |  |
 | Basic styling for MVP | H | 3hrs|  |  |
-| Total | H | 19hrs|  |  |
+| Total | H | 23hrs|  |  |
 
 PostMVP:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Sync state park abbreviations with actual names | M | 5hrs|  |  |
 | Style for readability and ease of use | M | 6hrs|  |  |
-| Create dynamic styling for mobile devices | M | 4hrs|  |  |
+| Create Search bar (Keyword) | M | 4hrs|  |  |
 | Total | M | 15hrs|  |  |
 
-| Total/Total | H | 34hrs|  |  |
+| Total/Total | H | 38hrs|  |  |
 
 ## Code Snippet
 
