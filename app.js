@@ -3,13 +3,14 @@
 // NPS Passport Stamp Locations API https://developer.nps.gov/api/v1/passportstamplocations?api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG
 
 const input = document.querySelector('#state-search')
-const button = document.querySelector("#search ")
+const button = document.querySelector("#search")
 
 
 async function fetchData(state) {
   // removeAlerts()
   try {
     const url = `https://developer.nps.gov/api/v1/alerts?stateCode=${state}&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG`
+    // const url = 'https://developer.nps.gov/api/v1/alerts?stateCode=' + inputValue + '&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG`
     const response = await axios.get(url)
     console.log(response)
     // const list = Object.keys(response.parkCode)
@@ -23,7 +24,6 @@ async function fetchData(state) {
       errorDiv.appendChild.incorrectInput  
   }
 }
-
 // fetchData()
 
 function removeResults() {
@@ -33,17 +33,15 @@ function removeResults() {
   }
 }
 
-const form = document.querySelector('#state-form')
-
-form.addEventListener('submit', (e) => {
+button.addEventListener('click', (e) => {
   e.preventDefault()
   if (document.querySelector('#state-alerts')) {
     removeResults()
   }
-  const inputValue = document.querySelector('#state-form').value
+  let inputValue = input.value;
   console.log(inputValue)
-  document.querySelector('#state-form').value = ''
   fetchData(inputValue)
+  document.querySelector('#state-search').value = ''
 })
 
 let alertDiv = document.querySelector('#state-alerts')
