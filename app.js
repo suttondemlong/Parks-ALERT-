@@ -22,10 +22,20 @@ async function fetchData(state) {
 
 // fetchData()
 
+function removeResults() {
+  const removeDiv = document.querySelector('#state-alerts')
+  while (removeDiv.lastChild) {
+    removeDiv.removeChild(removeDiv.lastChild)
+  }
+}
+
 const form = document.querySelector('#state-form')
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
+  if (document.querySelector('#state-alerts')) {
+    removeResults()
+  }
   const inputValue = document.querySelector('#state-form').value
   console.log(inputValue)
   document.querySelector('#state-form').value = ''
@@ -36,7 +46,7 @@ let alertDiv = document.querySelector('#state-alerts')
   
 function showStateAlerts(datas) {
   if (datas.length === 0) {
-    console.log(`No alerts here!`)
+    // console.log(`No alerts here!`)
     // const errorResponse = "No alerts!"
     const errorResponse = document.createElement('h3')
     errorResponse.innerHTML = "No Alerts!"
@@ -59,26 +69,3 @@ function showStateAlerts(datas) {
   return searchResult
 }
 
-    
-//   let stateAlert = `
-//   <h4> `
-// }
-
-// button.addEventListener('click', async () => {
-//   if ()
-// })
-// let userInput = input.value;
-
-
-// function showStateData(data) {
-//   let stateInfo = 
-// }
-
-
-
-// function parks(list) {
-//   const select = document.querySelector('select');
-//   return list.forEach((park) => {
-//     console.log(park)
-//   })
-// }
