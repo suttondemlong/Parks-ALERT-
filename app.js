@@ -47,6 +47,14 @@ function showStateAlerts(datas) {
     const title = document.createElement('h3')
     title.innerHTML = `${data.title}`
     alertDiv.appendChild(title)
+
+    const park = document.createElement('h4')
+    park.innerHTML = data.parkCode
+    alertDiv.appendChild(park)
+
+    const text = document.createElement('p')
+    text.innerHTML = data.description
+    alertDiv.appendChild(text)
   })
   return searchResult
 }
