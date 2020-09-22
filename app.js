@@ -16,7 +16,11 @@ async function fetchData(state) {
     // const data = response.data
     showStateAlerts(response.data.data)  // function for getting data invokes here
   } catch (error) {
-    console.log(`Error: ${error}`)
+    // console.log(`Error: ${error}`)
+      let errorDiv = document.querySelector('#error')
+      const incorrectInput = document.createElement('h3')
+      incorrectInput.innerHTML = "Incorrect Input: Please enter the two letter state abbreviation (ex. AZ, OH, CA, TX)"
+      errorDiv.appendChild.incorrectInput  
   }
 }
 
@@ -43,24 +47,27 @@ form.addEventListener('submit', (e) => {
 })
 
 let alertDiv = document.querySelector('#state-alerts')
+/* This line creates a variable that references the state-alerts ID, 
+used in the removeResults() function and the showStatesAlerts(datas) function */
   
 function showStateAlerts(datas) {
   if (datas.length === 0) {
     // console.log(`No alerts here!`)
     // const errorResponse = "No alerts!"
     const errorResponse = document.createElement('h3')
-    errorResponse.innerHTML = "No Alerts!"
+    errorResponse.innerHTML = "The coast is clear!"
     alertDiv.appendChild(errorResponse)
   }
   let searchResult = datas.map(data => {
-    console.log(data.title)
-    const title = document.createElement('h3')
-    title.innerHTML = `${data.title}`
-    alertDiv.appendChild(title)
+    // console.log(data.title)
 
-    const park = document.createElement('h4')
+    const park = document.createElement('h3')
     park.innerHTML = data.parkCode
     alertDiv.appendChild(park)
+
+    const title = document.createElement('h4')
+    title.innerHTML = `${data.title}`
+    alertDiv.appendChild(title)
 
     const text = document.createElement('p')
     text.innerHTML = data.description
