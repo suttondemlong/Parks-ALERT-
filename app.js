@@ -18,10 +18,8 @@ async function fetchData(state) {
     showStateAlerts(response.data.data)  // function for getting data invokes here
   } catch (error) {
     // console.log(`Error: ${error}`)
-      let errorDiv = document.querySelector('#error')
-      const incorrectInput = document.createElement('h3')
-      incorrectInput.innerHTML = "Incorrect Input: Please enter the two letter state abbreviation (ex. AZ, OH, CA, TX)"
-      errorDiv.appendChild.incorrectInput  
+     "Incorrect Input: Please enter the two letter state abbreviation (ex. AZ, OH, CA, TX)"
+     
   }
 }
 // fetchData()
@@ -52,8 +50,8 @@ function showStateAlerts(datas) {
   if (datas.length === 0) {
     // console.log(`No alerts here!`)
     // const errorResponse = "No alerts!"
-    const errorResponse = document.createElement('h3')
-    errorResponse.innerHTML = "The coast is clear!"
+    const errorResponse = document.createElement('p')
+    errorResponse.innerHTML = "Incorrect Input: Please enter the two letter state abbreviation (ex. AZ, OH, CA, TX, NY, MA)"
     alertDiv.appendChild(errorResponse)
   }
   let searchResult = datas.map(data => {

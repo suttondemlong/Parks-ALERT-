@@ -1,35 +1,44 @@
+/* html {
+  height: 100vh;
+  
+} */
+
 body {
-  display: flex;
-  align-content: space-around;
-  justify-content: center;
+height: auto;
+width: auto;
+display: grid;
+/* background-color: hsl(44, 91%, 87%); */
 }
 
+#landing-page {
+  height: auto;
+  width: auto;
+}
 
 h1 {
-  /* background-color: silver;
+  color: #0d68b3;
   width: 50%;
   margin: auto;
-  border-radius: .3rem; */
+  border-radius: .3rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 0px;
   text-align: center;
   font-family: 'Poller One', cursive;
-
-
 }
 
 h5 {
-  margin-top: 10px;
+  color: #0d3b66;
   text-align: center;
   font-family: 'Titillium Web', sans-serif;
 }
 
 #state-alerts {
-  padding-left: 10vw;
-  padding-right: 10vw;
+  color: #0b3469;
+  padding-left: 15vw;
+  padding-right: 15vw;
   margin: auto;
   text-align: center;
 }
@@ -43,6 +52,8 @@ h5 {
 
 #state-form {
   text-align: center;
+  padding: 5px;
+  color: ;
   font-family: 'Titillium Web', sans-serif;
 }
 
@@ -53,6 +64,10 @@ h5 {
 
 #search {
   font-family: 'Titillium Web', sans-serif;
+}
+
+::-webkit-input-placeholder {                 /* Found on css-tricks.com */
+  color: rgb(120, 161, 161);
 }
 
 h3 {
@@ -68,6 +83,6 @@ h4{
 }
 
 p {
-  margin-top: 5px;
+  margin-top: 10px;
   font-family: 'Barlow', sans-serif;
 }
