@@ -1,28 +1,33 @@
 // NPS Alert API not including state https://developer.nps.gov/api/v1/alerts?api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG
-// NPS Alert API including state https://developer.nps.gov/api/v1/alerts?stateCode=${state}&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG
-// NPS Passport Stamp Locations API https://developer.nps.gov/api/v1/passportstamplocations?api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG
+// NPS Alert API including state https://developer.nps.gov/api/v1/alerts?stateCode=${state}&limit=150&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG
+// NPS List of Parks https://developer.nps.gov/api/v1/parks?limit=500&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG
 
-const input = document.querySelector('#state-search')
-const button = document.querySelector("#search")
+const input = document.querySelector('#state-search');
+const button = document.querySelector("#search");
 
 
 async function fetchData(state) {
   // removeAlerts()
   try {
-    const url = `https://developer.nps.gov/api/v1/alerts?stateCode=${state}&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG`
-    // const url = 'https://developer.nps.gov/api/v1/alerts?stateCode=' + inputValue + '&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG`
-    const response = await axios.get(url)
-    console.log(response)
-    // const list = Object.keys(response.parkCode)
-    // const data = response.data
-    showStateAlerts(response.data.data)  // function for getting data invokes here
+    const url = `https://developer.nps.gov/api/v1/alerts?stateCode=${state}&limit=150&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG`
+    const response = await axios.get(url);
+    console.log(response);
+    showStateAlerts(response.data.data);  // function for getting data invokes here
   } catch (error) {
-    // console.log(`Error: ${error}`)
-     "Incorrect Input: Please enter the two letter state abbreviation (ex. AZ, OH, CA, TX)"
-     
+    // console.log(`Error: ${error}`) 
   }
 }
 // fetchData()
+
+async function grabParks(park) {
+  try {
+    const url = `https://developer.nps.gov/api/v1/parks?limit=500&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG`
+    const response = await axios.get(url);
+    console.log(response);
+  } catch (error) {
+    console.log(`Error: ${error}`) 
+  }
+}
 
 function removeResults() {
   const removeDiv = document.querySelector('#state-alerts')

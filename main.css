@@ -108,4 +108,7 @@ p {
     text-align: left;
     padding: 0px;
   }
+  #state-search, #search {
+   margin-top: 5px;
+  }
 }
