@@ -64,10 +64,10 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 #### MVP 
 
 - Access and implement data from the NPS Alert System API 
-- Create a search bar that has drop down menus with options referencing the information from the NPS API
-- Return results from NPS API, with links to the actual articles written by NPS
+- Create a search bar that uses two-letter state codes to access the information from the NPS API
+- Return results from NPS API
 - Design functionality that will allow for new searches to replace old searches 
-- Use media query to accomodate mobile devices seamlessly
+- Use media query to accomodate mobile devices
 - Write CSS that is functional and legible using flex and dynamic response tools
 
 #### PostMVP  
@@ -75,8 +75,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 - Find and link a data set that connects the park abreviations with their actual names, reducing friction for user experience.
 - Use styling to create a visually pleasing product
-- Create a search bar that implements a keyword search referencing the data in NPS API
-
+- Create a search bar with more specific search options 
 
 ## Project Schedule
 
@@ -87,10 +86,10 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |  Day | Deliverable | Status
 |---|---| ---|
 |Sept 18-21| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|Sept 21| Project Approval | Incomplete
-|Sept 22| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Sept 23| MVP | Incomplete
-|Sept 24| Post MVP/Styling | Incomplete
+|Sept 21| Project Approval | Complete
+|Sept 22| Core Application Structure (HTML, CSS, etc.) | Complete
+|Sept 23| MVP | Complete
+|Sept 24| Post MVP/Styling | Partial Completion
 |Sept 25| Presentations | Incomplete
 
 ## Priority Matrix
@@ -106,28 +105,44 @@ Time frames are also key in the development cycle.  You have limited time to cod
 MVP:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Access and implement data from the NPS Alert System API | H | 2hrs|  |  |
-| Create Search bar (drop downs) | H | 4hrs|  |  |
-| Connect drop downs and keyword to API | H | 5hrs|  |  |
-| Connect article titles to the NPS full article | H | 2hrs|  |  |
-| Write function for returning results and clearing results | H | 3hrs|  |  |
-| Use media query to accomodate mobile devices seamlessly | M | 4hrs|  |  |
-| Basic styling for MVP | H | 3hrs|  |  |
-| Total | H | 23hrs|  |  |
+| Access and implement data from the NPS Alert System API | H | 2hrs| 3hrs | 3hrs |
+| Create Search bar | H | 4hrs| 2hrs | 2hrs |
+| Connect drop downs and keyword to API | H | 5hrs| 0hrs | 0hrs |
+| Connect article titles to the NPS full article | H | 2hrs| 0hrs | 0hrs |
+| Write function for returning results and clearing results | H | 3hrs| 4hrs | 4hrs |
+| Use media query to accomodate mobile devices seamlessly | M | 4hrs| 4hrs | 4hrs |
+| Basic styling for MVP | H | 3hrs| 4hrs | 4hrs |
+| Total | H | 23hrs| 14hrs | 14hrs |
 
 PostMVP:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Sync state park abbreviations with actual names | M | 5hrs|  |  |
-| Style for readability and ease of use | M | 6hrs|  |  |
-| Create Search bar (Keyword) | M | 4hrs|  |  |
-| Total | M | 15hrs|  |  |
+| Sync state park abbreviations with actual names | M | 5hrs| 8hrs | 8hrs |
+| Style for readability and ease of use | M | 6hrs| 3hrs | 3hrs |
+| Create Search bar (Keyword) | M | 4hrs| 0hrs | 0hrs |
+| Total | M | 15hrs| 11hrs | 11hrs |
 
-| Total/Total | H | 38hrs|  |  |
+| Total/Total | H | 38hrs| 25hrs | 25hrs |
 
 ## Code Snippet
 
+```
+    const park = document.createElement('h3')
+    park.innerHTML = data.parkCode
+    alertDiv.appendChild(park)
 
+    const title = document.createElement('h4')
+    title.innerHTML = `${data.title}`
+    alertDiv.appendChild(title)
+
+    const text = document.createElement('p')
+    text.innerHTML = data.description
+    alertDiv.appendChild(text)
+  })
+  return searchResult
+}
+```
 
 ## Change Log
 
+I originally wanted to make use of drop down menus with increased specificity, but as I began to work with my API I realized that in order to do that I would have to use another API to populate the lists and I was unable to figure that out. All of my post-MVP was spent on that issue.

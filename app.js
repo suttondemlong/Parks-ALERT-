@@ -2,6 +2,7 @@
 
 const input = document.querySelector('#state-search')
 const button = document.querySelector("#search")
+let alertDiv = document.querySelector('#state-alerts')
 /* Global variables */
 
 async function fetchData(state) {
@@ -40,11 +41,6 @@ button.addEventListener('click', (e) => {
 of the search bar. It takes the input and communicates
 it to the API once the button is clicked. "Enter" also
 works for some reason. */
-
-let alertDiv = document.querySelector('#state-alerts')
-/* This line creates a variable that references the 
-state-alerts ID, used in the removeResults() function 
-and the showStatesAlerts(datas) function */
   
 function showStateAlerts(datas) {                                 // function for calling the alert information
   if (datas.length === 0) {
@@ -57,7 +53,7 @@ function showStateAlerts(datas) {                                 // function fo
 incorrect inputs in the search field. The API only 
 accepts 2-letter state abbreviations. */
 
-  let searchResult = datas.map(data => {                       
+let searchResult = datas.map(data => {                       
  /* .map allows this function to navigate the API  
  to directly access the information needed below 
 (i.e. response.data.data) */
