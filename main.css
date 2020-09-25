@@ -1,13 +1,7 @@
-/* html {
-  height: 100vh;
-  
-} */
-
 body {
 height: auto;
 width: auto;
 display: grid;
-/* background-color: hsl(44, 91%, 87%); */
 }
 
 #landing-page {

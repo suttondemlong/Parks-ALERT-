@@ -1,30 +1,21 @@
-// NPS Alert API not including state https://developer.nps.gov/api/v1/alerts?api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG
 // NPS Alert API including state https://developer.nps.gov/api/v1/alerts?stateCode=${state}&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG
-// NPS Passport Stamp Locations API https://developer.nps.gov/api/v1/passportstamplocations?api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG
 
 const input = document.querySelector('#state-search')
 const button = document.querySelector("#search")
-
+/* Global variables */
 
 async function fetchData(state) {
-  // removeAlerts()
+
   try {
     const url = `https://developer.nps.gov/api/v1/alerts?stateCode=${state}&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG`
-    // const url = 'https://developer.nps.gov/api/v1/alerts?stateCode=' + inputValue + '&api_key=h8NDokUnuZXPqh77nLY0qfs7oRjNuYXJvhq3dbqG`
     const response = await axios.get(url)
-    console.log(response)
-    // const list = Object.keys(response.parkCode)
-    // const data = response.data
-    showStateAlerts(response.data.data)  // function for getting data invokes here
+    showStateAlerts(response.data.data)                            // Function for retrieving data invokes here
   } catch (error) {
-    // console.log(`Error: ${error}`)
-     "Incorrect Input: Please enter the two letter state abbreviation (ex. AZ, OH, CA, TX)"
-     
+    console.log(`Error: ${error}`) 
   }
 }
-// fetchData()
 
-function removeResults() {
+function removeResults() {                                       // Function for removing results
   const removeDiv = document.querySelector('#state-alerts')
   while (removeDiv.lastChild) {
     removeDiv.removeChild(removeDiv.lastChild)
@@ -36,26 +27,40 @@ button.addEventListener('click', (e) => {
   if (document.querySelector('#state-alerts')) {
     removeResults()
   }
+  /* the above conditional runs the function removeResults()
+  if results exist on the page. In other words, it clears 
+  previous results. */
+
   let inputValue = input.value;
   console.log(inputValue)
   fetchData(inputValue)
-  document.querySelector('#state-search').value = ''
+  document.querySelector('#state-search').value = ''             // CLears input value to an empty string on click
 })
+/* The entire block above dictates the functionality
+of the search bar. It takes the input and communicates
+it to the API once the button is clicked. "Enter" also
+works for some reason. */
 
 let alertDiv = document.querySelector('#state-alerts')
-/* This line creates a variable that references the state-alerts ID, 
-used in the removeResults() function and the showStatesAlerts(datas) function */
+/* This line creates a variable that references the 
+state-alerts ID, used in the removeResults() function 
+and the showStatesAlerts(datas) function */
   
-function showStateAlerts(datas) {
+function showStateAlerts(datas) {                                 // function for calling the alert information
   if (datas.length === 0) {
-    // console.log(`No alerts here!`)
-    // const errorResponse = "No alerts!"
     const errorResponse = document.createElement('p')
-    errorResponse.innerHTML = "Incorrect Input: Please enter the two letter state abbreviation (ex. AZ, OH, CA, TX, NY, MA)"
+    errorResponse.innerHTML =
+      "Incorrect Input: Please enter the two letter state abbreviation (ex. AZ, OH, CA, TX, NY, MA)"
     alertDiv.appendChild(errorResponse)
   }
-  let searchResult = datas.map(data => {
-    // console.log(data.title)
+/* The above conditional addresses the instance of 
+incorrect inputs in the search field. The API only 
+accepts 2-letter state abbreviations. */
+
+  let searchResult = datas.map(data => {                       
+ /* .map allows this function to navigate the API  
+ to directly access the information needed below 
+(i.e. response.data.data) */
 
     const park = document.createElement('h3')
     park.innerHTML = data.parkCode
@@ -72,3 +77,6 @@ function showStateAlerts(datas) {
   return searchResult
 }
 
+/* The above code uses the .map function to navigate the API
+to access the information needed, then appends that information
+to the page. */
