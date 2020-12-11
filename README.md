@@ -1,5 +1,7 @@
 # Parks ALERT!
 
+[Deployed Site](https://suttondemlong.github.io/Parks-ALERT-/)
+
 # Project Overview
 
 Parks ALERT! Is a direct resource for checking the status of your local National Park when you are planning a trip. The purpose is to allow users to bypass the National Parks Services website to access their "Alert" information directly. Intended to be used as a quick reference tool on a short-term timeframe.
@@ -10,8 +12,7 @@ Parks ALERT!
 
 ## Project Description
 
-Parks ALERT! will be a simple interface with 3 search options. Visitors to the site will be given two drop down menus: "State" and "Park Name". There will also be a key word search if the user knows what they are looking for. The search bar should function in conjunction with or independent of the drop down menus. However the "Park Name" will only work if a "State" is chosen. The search will return a list of articles from the NPS database on all of their alerts for the given area or park. If the "Park Name" value is not chosen, the results will reflect the entire state. 
-
+Parks ALERT! will be a simple interface with 3 search options. Visitors to the site will be given two drop down menus: "State" and "Park Name". There will also be a key word search if the user knows what they are looking for. The search bar should function in conjunction with or independent of the drop down menus. However the "Park Name" will only work if a "State" is chosen. The search will return a list of articles from the NPS database on all of their alerts for the given area or park. If the "Park Name" value is not chosen, the results will reflect the entire state.
 
 ## API and Data Sample
 
@@ -56,41 +57,41 @@ The app will have essentially two screens: a landing page with just the search o
 
 https://www.figma.com/proto/weaT75hWk1jnmi4C1dsdIt/Parks-ALERT?node-id=1%3A3&scaling=scale-down
 
-
 ### MVP/PostMVP
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
 
-#### MVP 
+#### MVP
 
-- Access and implement data from the NPS Alert System API 
+- Access and implement data from the NPS Alert System API
 - Create a search bar that uses two-letter state codes to access the information from the NPS API
 - Return results from NPS API
-- Design functionality that will allow for new searches to replace old searches 
+- Design functionality that will allow for new searches to replace old searches
 - Use media query to accomodate mobile devices
 - Write CSS that is functional and legible using flex and dynamic response tools
 
-#### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
+#### PostMVP
+
+_These are examples only. Replace with your own Post-MVP features._
 
 - Find and link a data set that connects the park abreviations with their actual names, reducing friction for user experience.
 - Use styling to create a visually pleasing product
-- Create a search bar with more specific search options 
+- Create a search bar with more specific search options
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
+This schedule will be used to keep track of your progress throughout the week and align with our expectations.
 
 You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
-|  Day | Deliverable | Status
-|---|---| ---|
-|Sept 18-21| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|Sept 21| Project Approval | Complete
-|Sept 22| Core Application Structure (HTML, CSS, etc.) | Complete
-|Sept 23| MVP | Complete
-|Sept 24| Post MVP/Styling | Partial Completion
-|Sept 25| Presentations | Incomplete
+| Day        | Deliverable                                        | Status             |
+| ---------- | -------------------------------------------------- | ------------------ |
+| Sept 18-21 | Prompt / Wireframes / Priority Matrix / Timeframes | Complete           |
+| Sept 21    | Project Approval                                   | Complete           |
+| Sept 22    | Core Application Structure (HTML, CSS, etc.)       | Complete           |
+| Sept 23    | MVP                                                | Complete           |
+| Sept 24    | Post MVP/Styling                                   | Partial Completion |
+| Sept 25    | Presentations                                      | Incomplete         |
 
 ## Priority Matrix
 
@@ -100,11 +101,11 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
 
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
+Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
 MVP:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
+| --- | :---: | :---: | :---: | :---: |
 | Access and implement data from the NPS Alert System API | H | 2hrs| 3hrs | 3hrs |
 | Create Search bar | H | 4hrs| 2hrs | 2hrs |
 | Connect drop downs and keyword to API | H | 5hrs| 0hrs | 0hrs |
@@ -116,7 +117,7 @@ MVP:
 
 PostMVP:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
+| --- | :---: | :---: | :---: | :---: |
 | Sync state park abbreviations with actual names | M | 5hrs| 8hrs | 8hrs |
 | Style for readability and ease of use | M | 6hrs| 3hrs | 3hrs |
 | Create Search bar (Keyword) | M | 4hrs| 0hrs | 0hrs |
