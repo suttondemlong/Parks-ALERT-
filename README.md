@@ -57,74 +57,6 @@ The app will have essentially two screens: a landing page with just the search o
 
 https://www.figma.com/proto/weaT75hWk1jnmi4C1dsdIt/Parks-ALERT?node-id=1%3A3&scaling=scale-down
 
-### MVP/PostMVP
-
-The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
-
-#### MVP
-
-- Access and implement data from the NPS Alert System API
-- Create a search bar that uses two-letter state codes to access the information from the NPS API
-- Return results from NPS API
-- Design functionality that will allow for new searches to replace old searches
-- Use media query to accomodate mobile devices
-- Write CSS that is functional and legible using flex and dynamic response tools
-
-#### PostMVP
-
-_These are examples only. Replace with your own Post-MVP features._
-
-- Find and link a data set that connects the park abreviations with their actual names, reducing friction for user experience.
-- Use styling to create a visually pleasing product
-- Create a search bar with more specific search options
-
-## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
-| Day        | Deliverable                                        | Status             |
-| ---------- | -------------------------------------------------- | ------------------ |
-| Sept 18-21 | Prompt / Wireframes / Priority Matrix / Timeframes | Complete           |
-| Sept 21    | Project Approval                                   | Complete           |
-| Sept 22    | Core Application Structure (HTML, CSS, etc.)       | Complete           |
-| Sept 23    | MVP                                                | Complete           |
-| Sept 24    | Post MVP/Styling                                   | Partial Completion |
-| Sept 25    | Presentations                                      | Incomplete         |
-
-## Priority Matrix
-
-[Priority Matrix](https://drive.google.com/file/d/19o9eWjAzsrk-MyWh7F7WInC_pvRjJ4rt/view?usp=sharing)
-
-## Timeframes
-
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
-
-MVP:
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: | :---: | :---: | :---: |
-| Access and implement data from the NPS Alert System API | H | 2hrs| 3hrs | 3hrs |
-| Create Search bar | H | 4hrs| 2hrs | 2hrs |
-| Connect drop downs and keyword to API | H | 5hrs| 0hrs | 0hrs |
-| Connect article titles to the NPS full article | H | 2hrs| 0hrs | 0hrs |
-| Write function for returning results and clearing results | H | 3hrs| 4hrs | 4hrs |
-| Use media query to accomodate mobile devices seamlessly | M | 4hrs| 4hrs | 4hrs |
-| Basic styling for MVP | H | 3hrs| 4hrs | 4hrs |
-| Total | H | 23hrs| 14hrs | 14hrs |
-
-PostMVP:
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: | :---: | :---: | :---: |
-| Sync state park abbreviations with actual names | M | 5hrs| 8hrs | 8hrs |
-| Style for readability and ease of use | M | 6hrs| 3hrs | 3hrs |
-| Create Search bar (Keyword) | M | 4hrs| 0hrs | 0hrs |
-| Total | M | 15hrs| 11hrs | 11hrs |
-
-| Total/Total | H | 38hrs| 25hrs | 25hrs |
-
 ## Code Snippet
 
 ```
@@ -143,7 +75,3 @@ PostMVP:
   return searchResult
 }
 ```
-
-## Change Log
-
-I originally wanted to make use of drop down menus with increased specificity, but as I began to work with my API I realized that in order to do that I would have to use another API to populate the lists and I was unable to figure that out. All of my post-MVP was spent on that issue.
